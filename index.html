@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <button type="button" class="buttons button-interaction">HELLO</button>
+    <div class="wavy">
+      <span style="--i:0">F</span>
+      <span style="--i:1">I</span>
+      <span style="--i:2">D</span>
+      <span style="--i:3">G</span>
+      <span style="--i:4">I</span>
+      <span style="--i:5">-</span>
+      <span style="--i:6">G</span>
+      <span style="--i:7">A</span>
+      <span style="--i:8">M</span>
+      <span style="--i:9">E</span>
+      <span style="--i:10">S</span>
+    </div>
+    <button type="button" class="buttons button-interaction">CLICK</button>
+  </div>
+  <div class="description">
+    A collection of four fidgeting-friendly minigames.
+  </div>
+  <div class="grid-container">
+    <div class="minigame-title">SWITCHY</div>
+    <div class="minigame-title">BUBBLE WRAP</div>
+    <div class="minigame-cell" id="toggle-game">
+      <div class="toggle-container">
+        <div class="toggle-text">how fast can you switch all on?</div>
+        <div id="togglegame-counter" class="toggle-text">
+          time: <span id="toggle-number">0</span> <br />
+          highscore: <span id="toggle-highscore-number">0</span>
+        </div>
+        <button style="justify-self: center;" type="button" class="buttons" onclick="startToggleTimer()">WATCH
+          ME</button>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div class="minigame-cell" id="hover-game">
+      <div class="hovergame-menu">
+        <div id="blob-counter">
+          popped bubbles: <span id="blob-number">0</span>
+        </div>
+        <button type="button" class="buttons" id="restartBlobButton" onclick="restartBlobs()">MORE!</button>
+      </div>
+      <div>
+        <div class="blob-grid">
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+          <div class="hoverblob" data-sound="sound/id_perc_plop.wav"></div>
+        </div>
+      </div>
+    </div>
+    <div class="minigame-title">COLOR CARDS</div>
+    <div class="minigame-title">RUBBER DUCK WISDOM </div>
+    <div class="minigame-cell" id="colorcards-game">
+      <div class="card-controls">
+        <div>press [←] [→] to swipe & [↑] when the cards match</div>
+      </div>
+      <select autocomplete="off" name="color-level" id="color-level" onchange="handleOptionChange()">
+        <option value="rainbow">rainbow</option>
+        <option value="similar">three-colored</option>
+        <option value="similar2">two-colored</option>
+        <option value="colorblind">colorblind</option>
+        <option value="colorblind2">I can't do it</option>
+      </select>
+
+
+      <div class="card" id="play-card" data-sound="sound/ding.wav">
+        <img src="images/check.png" id="checkmark" />
+      </div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+      <div class="card color-card"></div>
+    </div>
+    <div class="minigame-cell" id="bullethell-game">
+      <div id="bullethell-menu">
+        <button type="button" class="buttons" id="duck-button" data-sound="sound/duck-quack.mp3">THANKS!</button>
+        <div class="controls">
+          <p>press [S] to shoot wisdom</p>
+        </div>
+      </div>
+      <div id="shooter">
+        <img src="images/ducky.png" alt="ducky" style="width: 50px; margin-bottom: 10px;" />
+      </div>
+    </div>
+    <a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by Pixel perfect -
+      Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/cute" title="cute icons">Cute
+      icons created by Freepik - Flaticon</a>
+  </div>
+  <div class="footer">
+    <p>
+      Digital Ideation DEWEB Project by Maisa
+    </p>
+    <p>
+      made@HSLU, FS23
+    </p>
+  </div>
+  <script>
+
+    // ----------------------------------------------------------------
+    // color card game bit
+
+
+    let colorcards = document.getElementsByClassName("color-card");
+    let playcard = document.getElementById("play-card");
+    let checkmark = document.getElementById("checkmark");
+    let playcardColor = "";
+    let dingSound = new Audio(playcard.dataset.sound);
+    let colorcardPositionsColl = [];
+    dingSound.volume = 0.2;
+    let currentColorArray = [];
+
+    let lastKeyPressTimestamp = Date.now();
+
+    let pixelPositions = [0, 75, 200, 325, 400];
+    let colorsArray = [
+      "#52E3E1", "#FDF148", "#F050AE", "#A0E426", '#9336FD', "#FFAB00", "#29aa5b", "#D883FF", "#33A8C7",
+      "#F77976"
+    ];
+
+    let similarColorsArray = [
+      "#560BAD", "#4361EE", "#6DAAF2", "#B5179E", '#480CA8', "#4895EF", "#3F37C9", "#7209B7", "#F72585",
+      "#3A0CA3"
+    ];
+
+    let pinkPurpleArray = [
+      "#FFB2E6", "#9A52FF", "#E382F9", "#EC92F3", '#8447FF', "#BA63FF", "#F6A2ED", "#D972FF", "#C468FF",
+      "#AF5DFF"
+    ];
+
+    let colorBlindArray = [
+      "#7E7CFF", "#7c79ff", "#8280FF", "#7a78fb", '#8482FE', "#74A2F2", "#73A4F9", "#71A1F4", "#6C9EF4",
+      "#77A7FB"
+    ];
+
+    let colorBlindArray2 = [
+      "#7E7CFF", "#7c79ff", "#8280FF", "#7a78fb", '#8482FE', "#7573F8", "#7D7BF8", "#7270F4", "#6C6AF2",
+      "#6D6AEB"
+    ];
+
+    function handleOptionChange() {
+      let colorLevel = document.getElementById("color-level");
+
+      if (colorLevel.value === "rainbow") {
+        colorcardPositionsColl = initializeCardSet(pixelPositions, colorsArray);
+
+      } else if (colorLevel.value === "similar") {
+        colorcardPositionsColl = initializeCardSet(pixelPositions, similarColorsArray);
+      } else if (colorLevel.value === "similar2") {
+        colorcardPositionsColl = initializeCardSet(pixelPositions, pinkPurpleArray);
+      } else if (colorLevel.value === "colorblind") {
+        colorcardPositionsColl = initializeCardSet(pixelPositions, colorBlindArray);
+      } else if (colorLevel.value === "colorblind2") {
+        colorcardPositionsColl = initializeCardSet(pixelPositions, colorBlindArray2);
+      }
+    }
+
+    function initializeCardSet(FixedPixelPositions, colorArray) {
+      currentColorArray = colorArray;
+
+      let colorcardOptions = [
+        [FixedPixelPositions[1], '100px', '0.0', '0.0', '0', colorArray[9]],
+        [FixedPixelPositions[0], '100px', '0.0', '0.0', '0', colorArray[8]],
+        [FixedPixelPositions[0], '100px', '0.75', '0.6', '1', colorArray[7]],
+        [FixedPixelPositions[1], '125px', '1.0', '0.8', '2', colorArray[6]],
+        [FixedPixelPositions[2], '150px', '1.0', '1.0', '3', colorArray[5]],
+        [FixedPixelPositions[3], '125px', '1.0', '0.8', '2', colorArray[4]],
+        [FixedPixelPositions[4], '100px', '0.75', '0.6', '1', colorArray[3]],
+        [FixedPixelPositions[4], '100px', '0.0', '0.0', '0', colorArray[2]],
+        [FixedPixelPositions[3], '100px', '0.0', '0.0', '0', colorArray[1]],
+        [FixedPixelPositions[2], '100px', '0.0', '0.0', '0', colorArray[0]]
+      ];
+
+      positionIndexes = [5, 6, 7, 8, 9, 0, 1, 2, 3, 4];
+
+      // iterate over each color card (for starters), is repeated when arrow keys pressed
+      for (let i = 0; i < colorcards.length; i++) {
+        let colorcard = colorcards[i];
+        let positionIndex = positionIndexes[i];
+
+        // Generate a random index to retrieve a color from the array
+        //let randomIndex = Math.floor(Math.random() * colorsArray.length);
+        //let randomColor = colorsArray[randomIndex];
+
+        // Apply the random color to the current color card
+        //colorcard.style.backgroundColor = randomColor;
+
+        // assign the colors
+        colorcard.style.backgroundColor = colorcardOptions[positionIndex][5];
+
+        // apply the updated style to the current color card
+        let translateString = `translate(${colorcardOptions[positionIndex][0]}px, 250px) scale(${colorcardOptions[positionIndex][3]})`;
+        colorcard.style.transform = translateString;
+        colorcard.style.opacity = colorcardOptions[positionIndex][2];
+        colorcard.style.zIndex = colorcardOptions[positionIndex][4];
+
+        // update the position index for the current color card
+        positionIndexes[i] = positionIndex;
+      }
+      newPlayCard(colorArray);
+
+      return colorcardOptions;
+    }
+
+
+
+
+    // return random color from color array colorArr
+    function assignRandomColor(colorArr) {
+      let randomIndex = Math.floor(Math.random() * colorArr.length);
+      let randomColor = colorArr[randomIndex];
+
+      return randomColor;
+    }
+
+    function newPlayCard(colorCollection) {
+      playcardColor = assignRandomColor(colorCollection);
+      playcard.style.backgroundColor = playcardColor
+    }
+
+    function rotateRightArrow(colorcardPositionsColl) {
+      // iterate over each color card
+      for (let i = 0; i < colorcards.length; i++) {
+        let colorcard = colorcards[i];
+        let positionIndex = positionIndexes[i];
+
+        // update position index
+        if (positionIndex === 0) {
+          positionIndex = colorcardPositionsColl.length - 1;
+        } else {
+          positionIndex--;
+        }
+
+        // apply the updated style to the current color card
+        let translateString = `translate(${colorcardPositionsColl[positionIndex][0]}px, 250px) scale(${colorcardPositionsColl[positionIndex][3]})`;
+        colorcard.style.transform = translateString;
+        colorcard.style.opacity = colorcardPositionsColl[positionIndex][2];
+        colorcard.style.zIndex = colorcardPositionsColl[positionIndex][4];
+
+        // update the position index for the current color card
+        positionIndexes[i] = positionIndex;
+      }
+    }
+
+    function rotateLeftArrow(colorcardPositionsColl) {
+      // iterate over each color card
+      for (let i = 0; i < colorcards.length; i++) {
+        let colorcard = colorcards[i];
+        let positionIndex = positionIndexes[i];
+
+        // update position index
+        if (positionIndex === colorcardPositionsColl.length - 1) {
+          positionIndex = 0;
+        } else {
+          positionIndex++;
+        }
+
+        // apply the updated style to the current color card
+        let translateString = `translate(${colorcardPositionsColl[positionIndex][0]}px, 250px) scale(${colorcardPositionsColl[positionIndex][3]})`;
+        colorcard.style.transform = translateString;
+        colorcard.style.opacity = colorcardPositionsColl[positionIndex][2];
+        colorcard.style.zIndex = colorcardPositionsColl[positionIndex][4];
+
+        // update the position index for the current color card
+        positionIndexes[i] = positionIndex;
+      }
+    }
+
+    // 0: pixel position, 1: size (not used atm), 2: opactiy, 3: scale, 4: zindex, 5: color
+    colorcardPositionsColl = [
+      [pixelPositions[1], '100px', '0.0', '0.0', '0', similarColorsArray[9]],
+      [pixelPositions[0], '100px', '0.0', '0.0', '0', similarColorsArray[8]],
+      [pixelPositions[0], '100px', '0.75', '0.6', '1', similarColorsArray[7]],
+      [pixelPositions[1], '125px', '1.0', '0.8', '2', similarColorsArray[6]],
+      [pixelPositions[2], '150px', '1.0', '1.0', '3', similarColorsArray[5]],
+      [pixelPositions[3], '125px', '1.0', '0.8', '2', similarColorsArray[4]],
+      [pixelPositions[4], '100px', '0.75', '0.6', '1', similarColorsArray[3]],
+      [pixelPositions[4], '100px', '0.0', '0.0', '0', similarColorsArray[2]],
+      [pixelPositions[3], '100px', '0.0', '0.0', '0', similarColorsArray[1]],
+      [pixelPositions[2], '100px', '0.0', '0.0', '0', similarColorsArray[0]]
+    ];
+
+    let positionIndexes = [5, 6, 7, 8, 9, 0, 1, 2, 3, 4]; // keep track of position indexes for each color card
+    colorcardPositionsColl = initializeCardSet(pixelPositions, colorsArray);
+
+
+
+    function checkColor() {
+      let colorArrToCheck = currentColorArray;
+      if (colorArrToCheck[positionIndexes[0]] === playcardColor) {
+        console.log("right card found!");
+        checkmark.style.opacity = "1.0";
+        playcard.style.opacity = "0.7";
+        dingSound.play();
+        setTimeout(function () {
+          checkmark.style.opacity = "0.0"
+          playcard.style.opacity = "1.0";
+          newPlayCard(currentColorArray);
+        }, 500);
+      }
+
+    }
+
+    document.addEventListener("keydown", function (event) {
+      event.preventDefault();
+      if (event.key === "ArrowRight") {
+        rotateRightArrow(colorcardPositionsColl);
+        console.log(positionIndexes);
+        lastKeyPressTimestamp = Date.now();
+      }
+      else if (event.key === "ArrowLeft" && Date.now() - lastKeyPressTimestamp >= 100) {
+        rotateLeftArrow(colorcardPositionsColl);
+        console.log(positionIndexes);
+        lastKeyPressTimestamp = Date.now();
+      } else if (event.key === "ArrowUp") {
+        checkColor();
+        lastKeyPressTimestamp = Date.now();
+      }
+    });
+
+    // ----------------------------------------------------------------
+
+    // togglez bit, external: reset switches once all are checked
+    let switches = document.querySelectorAll('.switch input[type="checkbox"]');
+    let score = 0;
+    let scoreDisplayed = 0;
+    let highscore = 0;
+    let timerId = 0;
+    /* let start = document.querySelector('#start'); */
+    let toggleTimer = document.getElementById('toggle-number');
+    let toggleHighScore = document.getElementById("toggle-highscore-number");
+
+    function handleSwitchClick() {
+      //switchAudio.play();
+      let allChecked = true;
+
+      switches.forEach(function (switchElement) {
+        let siblingSlider = switchElement.parentNode.querySelector('.slider');
+
+        if (!switchElement.checked && !siblingSlider.matches(':focus')) {
+          allChecked = false;
+        }
+      });
+
+      if (allChecked) {
+        console.log('All toggle switches are checked or focused.');
+        // wait a bit until unchecking all switches again
+        setTimeout(function () {
+          switches.forEach(function (switchElement) {
+            switchElement.checked = false;
+          });
+        }, 300);
+        clearInterval(timerId);
+        if (score < highscore || highscore === 0) {
+          highscore = score;
+          let toggleNumberString = `${scoreDisplayed}`
+          toggleHighScore.innerHTML = toggleNumberString;
+        }
+
+      }
+    }
+
+    switches.forEach(function (switchElement) {
+      switchElement.addEventListener('click', handleSwitchClick);
+    });
+
+
+    function startToggleTimer() {
+      clearInterval(timerId);
+      switches.forEach(function (switchElement) {
+        switchElement.checked = false;
+      });
+      score = 0;
+      timerId = setInterval(function () {
+        score++;
+        scoreDisplayed = score / 10;
+        scoreDisplayed = Number(scoreDisplayed).toFixed(1);
+        toggleTimer.innerHTML = `${scoreDisplayed}`
+      }, 100);
+
+    }
+
+    // ----------------------------------------------------------------
+
+    // bullet hell bit, only sticky for now
+    let clientXValue = 0;
+    let clientYValue = 0;
+
+    let stickyBullets = [];
+
+    let bullethell = document.getElementById('bullethell-game');
+    let duckButton = document.getElementById('duck-button');
+
+    let quackSound = new Audio(duckButton.dataset.sound);
+
+    class Bullet {
+      constructor() {
+        this.bulletElement = null;
+        this.parentElement = document.getElementById('bullethell-game');
+      }
+
+      createBullet() {
+        this.bulletElement = document.createElement('div');
+        this.bulletElement.classList.add('bullet');
+        this.bulletElement.innerHTML = "wisdom";
+        this.parentElement.appendChild(this.bulletElement);
+      }
+
+      animateSticky() {
+        this.bulletElement.classList.add('sticky');
+        let bulletXValue = clientXValue;
+        let bulletYValue = clientYValue;
+        // delete stickyBullets[key]
+        stickyBullets[this.bulletElement] = [clientXValue, clientYValue];
+        this.bulletAnimation = this.bulletElement.animate([
+          { transform: 'translate(275px, 225px)' },
+          { transform: `translate(${bulletXValue}px, ${bulletYValue}px)` }
+        ], {
+          duration: 500,
+          direction: 'normal',
+          easing: 'linear',
+          fill: 'forwards',
+        });
+
+      }
+
+      animateIt() {
+        this.bulletElement.classList.add('vanish');
+        let bulletXValue = clientXValue;
+        let bulletYValue = clientYValue;
+        this.bulletAnimation = this.bulletElement.animate([
+          { transform: 'translate(275px, 225px)' },
+          { transform: `translate(${bulletXValue}px, ${bulletYValue}px)` }
+        ], {
+          duration: 500,
+          direction: 'normal',
+          easing: 'linear',
+          fill: 'none',
+        });
+        // remove the bullet div once finished flying
+        this.bulletAnimation.onfinish = this.removeIt;
+        //TODO: update event? animation
+        this.bulletAnimation.addEventListener("update", checkCollision);
+      }
+
+      removeIt(element) {
+        // get the div that's animated by the srcElement (Animation) element and remove the div
+        element.srcElement.effect.target.remove();
+        //delete this;
+      }
+
+      deleteBullet() {
+        delete this;
+      }
+    }
+
+    function checkCollision() {
+      console.log("checkCollision active!!!");
+    }
+
+
+    function shoot(e) {
+      let bulletEl = new Bullet();
+      let xRangeOk = (clientXValue > -5) && (clientXValue < 550);
+      let yRangeOk = (clientYValue > -5) && (clientYValue < 473);
+      if (e.keyCode === 83 && xRangeOk && yRangeOk) {
+        bulletEl.createBullet();
+        console.log("sticky bullet shot");
+        bulletEl.animateSticky();
+      }
+      /* if (e.keyCode === 83 && xRangeOk && yRangeOk) {
+        bulletEl.createBullet();
+        bulletEl.animateIt();
+      } */
+
+      /* console.log(document.getElementById('bullethell-game').offsetLeft);
+      console.log(document.getElementById('bullethell-game').offsetTop);
+      console.log(clientXValue);
+      console.log(clientYValue); */
+
+      /* for (let stickyBullet of document.getElementsByClassName('sticky')) {
+        console.log(`stickyBullet: ${stickyBullet}, x: ${getTranslateX(stickyBullet)}, y: ${getTranslateY(stickyBullet)}`)
+      } */
+
+      //TODO: delete bullet instances
+      // not sure if this is working
+      //bulletEl.deleteBullet();
+    }
+
+    function getDistance() {
+
+    }
+
+    function updateMousePosition(e) {
+      /* clientXValue = e.clientX;
+      clientYValue = e.clientY; */
+
+      // Get the bounding rectangle of the box
+      const boxRect = bullethell.getBoundingClientRect();
+
+      // Calculate the mouse coordinates relative to the box
+      const mouseX = e.clientX - boxRect.left;
+      const mouseY = e.clientY - boxRect.top;
+
+      clientXValue = mouseX - 15;
+      clientYValue = mouseY - 15;
+    }
+
+    document.addEventListener('mousemove', updateMousePosition)
+    document.addEventListener('keydown', shoot);
+
+
+    function getTranslateX(element) {
+      let style = window.getComputedStyle(element);
+      let matrix = new WebKitCSSMatrix(style.transform);
+      return matrix.m41;
+    }
+
+    function getTranslateY(element) {
+      let style = window.getComputedStyle(element);
+      let matrix = new WebKitCSSMatrix(style.transform);
+      return matrix.m42;
+    }
+
+    function getEndTranslation(element) {
+      let style = window.getComputedStyle(element);
+      let matrix = new WebKitCSSMatrix(style.transform);
+      return matrix.m22;
+    }
+
+    function restartBulletHell() {
+      console.log("restart bullethell clicked");
+      let anotherQuack = quackSound.cloneNode()
+      anotherQuack.volume = 0.1;
+      anotherQuack.play();
+      let allBullets = document.querySelectorAll('.bullet');
+      if (allBullets.length > 0) {
+        allBullets.forEach(element => {
+          element.remove();
+        });
+      }
+    }
+
+    duckButton.addEventListener('click', restartBulletHell);
+
+    // ----------------------------------------------------------------
+
+    let blobs = document.querySelectorAll('.hoverblob');
+    let blobCounterElement = document.getElementById('blob-number');
+    let blobCounter = 0;
+    let blobColors = ["#EA698B", "#D55D92", "#C05299", "#AC46A1", "#973AA8", "#822FAF", "#6D23B6", "#6411AD", "#571089", "#47126B"];
+
+    blobs.forEach(blob => {
+      let hoverSound = new Audio(blob.dataset.sound);
+      hoverSound.volume = 0.3;
+      blob.addEventListener('mouseover', function () {
+        hoverSound.volume = 0.3;
+        hoverSound.currentTime = 0;  // Reset the audio to the beginning
+        if (window.getComputedStyle(blob).getPropertyValue('opacity') != 0.5) {
+          hoverSound.play();  // Play the audio
+          blobCounter++;
+          blobCounterElement.innerHTML = blobCounter;
+          if (blobCounter % 10 === 0) {
+            blobCounterElement.style.transform = 'scale(1.4)';
+          } else {
+            blobCounterElement.style.transform = 'scale(1)';
+          }
+        }
+        this.style.transform = 'translate(-2.5px, 2.5px)'
+        this.style.opacity = 0.5;
+
+      });
+
+      blob.addEventListener('mouseout', function () {
+        this.style.transform = 'translate(0px, 0px)'
+      });
+
+    });
+
+    function restartBlobs() {
+      let randColor = assignRandomColor(blobColors);
+      blobs.forEach(blob => {
+        blob.style.backgroundColor = randColor;
+        blob.style.opacity = "1.0";
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>

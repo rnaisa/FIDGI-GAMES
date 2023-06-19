@@ -1,0 +1,397 @@
+:root {
+  --text-color: black;
+  --background-color: rgb(253, 252, 252);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.grid-container {
+  flex-grow: 3;
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 2rem 500px 2rem 500px 2rem;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.description {
+  color: var(--text-color);
+  margin: 2rem;
+  margin-bottom: 5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.minigame-cell {
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.minigame-title {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+#toggle-game {
+  background-color: rgb(254, 255, 216);
+  height: 100%;
+  width: 100%;
+}
+
+.toggle-container {
+  padding: 20px;
+  /* border box makes it stay in parent container with paddings and all*/
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-text {
+  justify-self: center;
+  text-align: center;
+  float: right;
+}
+
+#hover-game {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: rgb(255, 219, 244);
+}
+
+.blob-grid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hovergame-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+#restartBlobButton {
+  justify-self: end;
+}
+
+#blob-counter {
+  justify-self: start;
+  padding: 35px;
+}
+
+.hoverblob {
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+  opacity: 1.0;
+  background-color: #EA698B;
+  box-shadow: 0 4px 8px 0 rgba(95, 95, 95, 0.2), 0 6px 20px 0 rgba(128, 128, 128, 0.19);
+}
+
+#colorcards-game {
+  background-color: rgb(212, 227, 255);
+}
+
+#bullethell-game {
+  background-color: rgb(221, 250, 221);
+}
+
+.header {
+  color: var(--text-color);
+  font-size: 2rem;
+  text-align: center;
+  margin: 4rem;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+
+}
+
+.wavy {
+  position: relative;
+}
+
+.wavy span {
+  position: relative;
+  display: inline-block;
+  /* uncomment to activate wavy animation!*/
+  animation: animate 2s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+
+
+@keyframes animate {
+  0% {
+    transform: translateY(12px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(12px);
+  }
+}
+
+.card {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.color-card {
+  background-color: lightgray;
+  transition: transform 0.4s ease, opacity 0.5s ease;
+  transform: translate(225px, 175px);
+  opacity: 1.0;
+}
+
+#play-card {
+  background-color: transparent;
+  transform: translate(200px, 50px) scale(0.7);
+  transition: opacity 0.2s ease;
+  opacity: 1.0;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+#checkmark {
+  position: relative;
+  height: 50px;
+  top: 75px;
+  left: 75px;
+  transition: opacity 0.2s ease;
+  opacity: 0.0;
+}
+
+
+.footer {
+  padding: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(192, 192, 192);
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.bullet {
+  /* height: 30px;
+  width: 30px; */
+  border-radius: 50%;
+  /*background-color: black;*/
+  position: absolute;
+  transform: translate(400px, 200px);
+  /*transition: transform 4s;
+  transition-timing-function: linear;*/
+  z-index: 0;
+}
+
+#shooter {
+  /* background-color: rosybrown; */
+  height: 50px;
+  border-radius: 5%;
+  width: 50px;
+  z-index: 1;
+  position: absolute;
+  transform: translate(275px, 225px);
+}
+
+#blob-number {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.sticky {}
+
+.vanish {}
+
+#bullethell-menu {
+  position: absolute;
+  height: 50px;
+  width: 600px;
+  z-index: 2;
+}
+
+.buttons {
+  display: relative;
+  font-size: 14px;
+  background-color: white;
+  outline: none;
+  border-radius: 5%;
+  border: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  width: 100px;
+  height: 40px;
+  float: right;
+  margin: 5%;
+  cursor: pointer;
+  box-shadow: 0px 7px #bbbbbb;
+}
+
+#color-level {
+  position: relative;
+  font-size: 14px;
+  background-color: white;
+  outline: none;
+  border-radius: 5%;
+  border: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  float: left;
+  margin: 5%;
+  margin-left: 20px;
+  top: 10%;
+  cursor: pointer;
+  box-shadow: 0px 7px #bbbbbb;
+}
+
+.buttons:active {
+  background-color: white;
+  box-shadow: 0px 4px #807f7f;
+  transform: translateY(3px);
+}
+
+.control-buttons {
+  display: relative;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 10%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  width: 40px;
+  border: none;
+  height: 40px;
+  float: right;
+  margin: 30px;
+  justify-self: center;
+  margin-left: 0;
+  box-shadow: 0 2px 4px 0 rgba(95, 95, 95, 0.2), 0 3px 10px 0 rgba(128, 128, 128, 0.19);
+}
+
+.button-interaction {
+  background-color: rgb(238, 237, 237);
+  margin: 10px;
+}
+
+.button-interaction:active {
+  background-color: rgb(238, 237, 237);
+}
+
+#bullethell-control-button {}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.controls p {
+  text-align: center;
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+
+.card-controls {
+  position: absolute;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+/*toggle switch external code (w3schools)*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 68px;
+  justify-self: center;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 52px;
+  width: 52px;
+  left: 8px;
+  bottom: 8px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #ff9e00;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #ff9e00;
+}
+
+input:checked+.slider:before {
+  transform: translateX(52px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 68px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
